@@ -164,8 +164,8 @@
       if (!modal.hasClass('open')) {
         var open_modal = self.S('[' + self.attr_name() + '].open');
 
-        if (typeof modal.data('css-top') === 'undefined') {
-          modal.data('css-top', parseInt(modal.css('top'), 10))
+        if (typeof modal.data('cssTop') === 'undefined') {
+          modal.data('cssTop', parseInt(modal.css('top'), 10))
             .data('offset', this.cache_offset(modal));
         }
 
@@ -345,7 +345,7 @@
         if (animData.pop) {
           css.top = $(window).scrollTop() - el.data('offset') + 'px';
           var end_css = {
-            top: $(window).scrollTop() + el.data('css-top') + 'px',
+            top: $(window).scrollTop() + el.data('cssTop') + 'px',
             opacity: 1
           };
 
@@ -360,7 +360,7 @@
           }, settings.animation_speed / 2);
         }
 
-        css.top = $(window).scrollTop() + el.data('css-top') + 'px';
+        css.top = $(window).scrollTop() + el.data('cssTop') + 'px';
 
         if (animData.fade) {
           var end_css = {opacity: 1};

@@ -45,6 +45,7 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
+    plugins: ['karma-jasmine', 'karma-phantomjs-launcher'],
     // Start these browsers, currently available:
     // - Chrome
     // - ChromeCanary
